@@ -130,7 +130,7 @@ Create a [Resend](https://resend.com) account, verify your domain, and set `RESE
 - **Products, stock, coupons, storefront photos**: from the admin dashboard
 - **Brand colours and fonts**: `src/app/globals.css`
 - **Product photos**: products without a photo show a "Photo coming soon" placeholder. Upload photos from **Admin → Products** (portrait 4:5, around 1600 × 2000 px).
-- **Lifestyle photos**: defaults are the Red Betta campaign images in `public/images` (one category tile uses a free [Pexels](https://www.pexels.com/license/) photo). Replace any of them in **Admin → Storefront**. Prompts for generating on-brand images are in [`docs/IMAGE_PROMPTS.md`](docs/IMAGE_PROMPTS.md).
+- **Lifestyle photos**: defaults are the Red Betta campaign images in `public/images`. Replace any of them in **Admin → Storefront**. Prompts for generating on-brand images are in [`docs/IMAGE_PROMPTS.md`](docs/IMAGE_PROMPTS.md).
 
 ## Project structure
 

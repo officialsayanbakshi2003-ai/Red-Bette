@@ -8,7 +8,7 @@ import { getStorefrontMedia } from "@/lib/site-media";
 
 export const metadata: Metadata = {
   title: "Our story",
-  description: `The story behind ${siteConfig.name}, a premium streetwear label ${siteConfig.parentLine.toLowerCase()}.`,
+  description: `The story behind ${siteConfig.name}, a premium streetwear label from the house of ${siteConfig.parentBrand}.`,
 };
 
 export default async function AboutPage() {
@@ -36,7 +36,7 @@ export default async function AboutPage() {
             for, whatever the artwork on the back.
           </p>
           <p>
-            {siteConfig.name} is a streetwear label {siteConfig.parentLine.toLowerCase()}. Every piece starts as
+            {siteConfig.name} is a streetwear label from the house of {siteConfig.parentBrand}. Every piece starts as
             original art: crimson fins, blood moons, lone wolves, red widows, mountain ridges. We print it big and bold on
             heavyweight cotton and finish it with the details you notice later, like red-tipped drawcords, hood stripes and
             sleeve prints.

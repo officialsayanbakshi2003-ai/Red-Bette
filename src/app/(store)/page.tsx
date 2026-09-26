@@ -144,7 +144,7 @@ export default async function HomePage() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-4 sm:p-6">
                 <div>
-                  <p className="text-[0.65rem] uppercase tracking-[0.25em] text-mist">{c._count.products} styles</p>
+                  <p className="text-[0.65rem] uppercase tracking-[0.25em] text-mist">{c._count.products} {c._count.products === 1 ? "style" : "styles"}</p>
                   <h3 className={"display mt-1 " + (i === 0 ? "text-4xl sm:text-6xl" : "text-2xl sm:text-3xl")}>{c.name}</h3>
                 </div>
                 <span className="grid size-10 shrink-0 place-items-center rounded-full border border-bone/30 transition-colors group-hover:border-blood group-hover:bg-blood">
@@ -212,12 +212,12 @@ export default async function HomePage() {
       <section className="pt-24 sm:pt-32" aria-labelledby="banner-title">
         <div className="theme-dark relative isolate overflow-hidden bg-ink">
           <div className="absolute inset-0 -z-10">
-            <RemotePhoto photo={media.aboutHero} sizes="100vw" className="object-cover" />
+            <RemotePhoto photo={media.banner} sizes="100vw" className="object-cover object-right" />
             <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-ink/10" />
           </div>
           <div className="container-x py-20 sm:py-28" data-reveal>
             <p className="eyebrow !text-bone/80">Limited drops</p>
-            <h2 id="banner-title" className="display mt-4 max-w-2xl text-5xl sm:text-7xl">
+            <h2 id="banner-title" className="display mt-4 max-w-2xl text-[2.6rem] xs:text-5xl sm:text-7xl">
               Different route. <span className="text-blood">Same destination.</span>
             </h2>
             <p className="mt-5 max-w-md text-bone/80">

@@ -72,6 +72,7 @@ const products: Seed[] = [
       "/images/crimson-splash-hoodie-studio-back.webp",
       "/images/crimson-splash-hoodie-front.webp",
       "/images/crimson-splash-hoodie-back.webp",
+      "/images/crimson-splash-hoodie-rooftop.webp",
       "/images/lookbook-betta-hoodie-model.webp",
     ],
     description:
@@ -149,8 +150,9 @@ const products: Seed[] = [
     category: "oversized-tees",
     price: rupees(1299),
     compareAt: rupees(1599),
-    images: [],
-    description: "The motto, loud and clear. Big italic back print, clean chest logo, heavyweight boxy fit.",
+    images: ["/images/betta-tee-hanger.webp"],
+    description:
+      "The motto, worn loud. A full crimson betta in motion across the back, a clean chest and a heavyweight boxy fit.",
     details: TEE_DETAILS,
     tags: ["bestseller"],
     featured: true,
@@ -204,8 +206,9 @@ const products: Seed[] = [
     name: "Crimson Tide Crewneck",
     category: "sweatshirts",
     price: rupees(2199),
-    images: [],
-    description: "A betta riding a silver tide across the front, with a vertical tagline down the sleeve.",
+    images: ["/images/crimson-tide-crewneck-garage.webp"],
+    description:
+      "A crimson betta in full flow across the back, printed big on brushed-back fleece. Clean front, relaxed fit.",
     details: CREW_DETAILS,
     tags: ["betta"],
     color: "Black",
@@ -274,7 +277,7 @@ const products: Seed[] = [
 
 // Bump when the seeded catalogue copy/images change. Existing stores get the
 // new values once; after that, edits made in the admin are never overwritten.
-const CATALOG_VERSION = 4;
+const CATALOG_VERSION = 5;
 
 async function main() {
   const versionRow = await db.siteSetting.findUnique({ where: { key: "seed.catalogVersion" } });

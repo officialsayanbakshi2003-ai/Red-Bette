@@ -1,6 +1,6 @@
 // Storefront photography. Defaults are Red Betta campaign images in
-// public/images (plus one Pexels photo, free for commercial use). Admins can
-// replace any slot from Admin → Storefront, which stores the URL in SiteSetting.
+// public/images. Admins can replace any slot from Admin → Storefront, which
+// stores the URL in SiteSetting.
 
 export interface Photo {
   src: string;
@@ -8,8 +8,6 @@ export interface Photo {
   credit: string;
   fallback: string; // shown if the image cannot load
 }
-
-const pexels = (id: number) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg`;
 
 export const MEDIA_SLOTS = {
   hero: {
@@ -46,9 +44,9 @@ export const MEDIA_SLOTS = {
     label: "Category tile: Oversized Tees",
     hint: "Portrait 4:5.",
     photo: {
-      src: pexels(8532616),
-      alt: "A black t-shirt hanging on a wall",
-      credit: "Pexels",
+      src: "/images/betta-tee-hanger.webp",
+      alt: "Black oversized tee with a crimson betta back print on a hanger under red light",
+      credit: "Red Betta",
       fallback: "/images/placeholder.svg",
     },
   },
@@ -56,8 +54,18 @@ export const MEDIA_SLOTS = {
     label: "Category tile: Sweatshirts",
     hint: "Portrait 4:5.",
     photo: {
-      src: "/images/hooded-red-smoke.webp",
-      alt: "Hooded figure in black streetwear against red smoke",
+      src: "/images/crimson-tide-crewneck-garage.webp",
+      alt: "Model sitting on steps in a red-lit parking garage, wearing a black crewneck with a crimson betta print",
+      credit: "Red Betta",
+      fallback: "/images/placeholder.svg",
+    },
+  },
+  banner: {
+    label: "Homepage banner",
+    hint: "Full-width banner near the bottom of the homepage. Landscape 16:9 with space on the left for text.",
+    photo: {
+      src: "/images/betta-wide-black.webp",
+      alt: "Crimson betta with flowing fins on a black background",
       credit: "Red Betta",
       fallback: "/images/placeholder.svg",
     },
@@ -83,11 +91,11 @@ export const MEDIA_SLOTS = {
     },
   },
   aboutStudio: {
-    label: "About page: craft",
+    label: "About page: side photo",
     hint: "Portrait 4:5.",
     photo: {
-      src: "/images/studio-screen-printing.webp",
-      alt: "Screen printing crimson ink onto a black hoodie in the workshop",
+      src: "/images/rain-street-walk.webp",
+      alt: "Hooded figure walking alone down a rain-soaked street lit red",
       credit: "Red Betta",
       fallback: "/images/placeholder.svg",
     },

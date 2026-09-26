@@ -45,7 +45,7 @@ All five hoodies already have studio front and back photos from your mockups. Us
 
 | # | Product | [GARMENT] | [DESIGN] | [SCENE] |
 |---|---|---|---|---|
-| 6 | Flow Your Way Oversized Tee | t-shirt | a bold abstract crimson brush-stroke wave across the back | hanging on a black metal hanger against a cracked concrete wall under a red spotlight |
+| 6 | Flow Your Way Oversized Tee *(has photo)* | t-shirt | a large crimson betta fish with flowing fins across the back | hanging on a black metal hanger against a cracked concrete wall under a red spotlight |
 | 7 | Betta Mark Tee (Bone) | off-white bone t-shirt | a large crimson betta fish print on the front | worn by a model sitting on concrete steps in soft daylight with red accents |
 | 8 | Red Moon Oversized Tee | t-shirt | a crimson betta circling a red moon with small rising bubbles | on a rooftop at night, city lights blurred behind |
 | 9 | Signature Logo Tee | t-shirt | a small red emblem on the chest and a clean minimal back | street portrait from behind in a narrow alley with red neon |
@@ -54,7 +54,7 @@ All five hoodies already have studio front and back photos from your mockups. Us
 
 | # | Product | [GARMENT] | [DESIGN] | [SCENE] |
 |---|---|---|---|---|
-| 10 | Crimson Tide Crewneck | crewneck sweatshirt | a crimson betta riding a silver wave across the front | sitting on steps in an underground parking garage lit red |
+| 10 | Crimson Tide Crewneck *(has photo)* | crewneck sweatshirt | a large crimson betta fish with flowing fins across the back | sitting on steps in an underground parking garage lit red |
 | 11 | Stealth Crewneck | crewneck sweatshirt | an all-black tonal emblem on the chest, black on black | minimal studio portrait from behind, single red rim light |
 | 12 | Flow Joggers | jogger pants | crimson side stripes and red-tipped drawcords | walking shot from the waist down on wet asphalt with red reflections |
 | 13 | Betta Cap | six-panel black cap | a small embroidered crimson emblem on the front | close-up on a model's head from the side, face turned away, red backlight |
@@ -71,8 +71,9 @@ For the cap and tote, use "Studio product photo of a [GARMENT] with [DESIGN], fr
 | Homepage hero *(has your photo)* | 4:5 | Back view of a model in an oversized black hoodie with a crimson betta back print, standing against a concrete wall under red neon light |
 | Homepage craft story *(has your photo)* | 4:5 | A screen printing workshop in India, hands pulling a squeegee printing crimson ink onto a black hoodie, warm tungsten and red light, documentary style |
 | Category: Hoodies *(has your photo)* | 4:5 | Studio shot of an oversized black hoodie back view with a large crimson print, dark charcoal backdrop |
-| Category: Oversized Tees | 4:5 | An oversized black t-shirt with a bold red back print hanging on a black metal hanger against a cracked concrete wall, single red spotlight from above |
-| Category: Sweatshirts *(has your photo)* | 4:5 | A hooded figure in black streetwear, face hidden under the hood, red smoke and backlight |
+| Category: Oversized Tees *(has your photo)* | 4:5 | An oversized black t-shirt with a bold red back print hanging on a black metal hanger against a cracked concrete wall, single red spotlight from above |
+| Category: Sweatshirts *(has your photo)* | 4:5 | A model sitting on concrete steps in an underground parking garage lit red, wearing a black crewneck with a crimson betta back print |
+| Homepage banner *(has your photo)* | 16:9 | A crimson betta with flowing fins on the right side of a pure black frame, rising bubbles, empty black space on the left for text |
 | Sign-in page *(has your photo)* | 4:5 | Close-up of a hooded figure in black streetwear, face hidden in shadow, red rim light, dark smoky background |
 | About page: top *(has your photo)* | 16:9 | Extreme macro of flowing crimson fabric-like fins in dark water, abstract, rich crimson and deep black |
-| About page: craft *(has your photo)* | 4:5 | Same as the craft story prompt, a different angle |
+| About page: side photo *(has your photo)* | 4:5 | A hooded figure walking alone down a rain-soaked city street at night, red neon reflections on wet asphalt |
