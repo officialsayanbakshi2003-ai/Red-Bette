@@ -69,6 +69,8 @@ const products: Seed[] = [
     price: rupees(2499),
     compareAt: rupees(2999),
     images: [
+      "/images/crimson-splash-hoodie-studio-back.webp",
+      "/images/crimson-splash-hoodie-front.webp",
       "/images/crimson-splash-hoodie-back.webp",
       "/images/lookbook-betta-hoodie-model.webp",
     ],
@@ -87,7 +89,7 @@ const products: Seed[] = [
     category: "hoodies",
     price: rupees(2799),
     compareAt: rupees(3299),
-    images: [],
+    images: ["/images/blood-moon-hoodie-back.webp", "/images/blood-moon-hoodie-front.webp"],
     description:
       "A betta rises against a blood-red moon, split by a line of still water. Finished with a red hood stripe and a vertical sleeve print.",
     details: HOODIE_DETAILS,
@@ -103,7 +105,7 @@ const products: Seed[] = [
     name: "Made To Flow Alone Hoodie",
     category: "hoodies",
     price: rupees(2699),
-    images: [],
+    images: ["/images/made-to-flow-alone-hoodie-back.webp", "/images/made-to-flow-alone-hoodie-front.webp"],
     description:
       "For the ones who move on their own terms. A red moon over jagged peaks, with the Made To Flow Alone manifesto stacked across the back.",
     details: HOODIE_DETAILS,
@@ -117,7 +119,7 @@ const products: Seed[] = [
     name: "Red Widow Hoodie",
     category: "hoodies",
     price: rupees(2799),
-    images: [],
+    images: ["/images/red-widow-hoodie-back.webp", "/images/red-widow-hoodie-front.webp"],
     description:
       "Dark, sharp and unmistakable. A widow spider hangs in a red web across the back, crossing onto the chest and sleeve. The loudest piece in the drop.",
     details: HOODIE_DETAILS,
@@ -132,7 +134,7 @@ const products: Seed[] = [
     name: "Different Route Hoodie",
     category: "hoodies",
     price: rupees(2599),
-    images: [],
+    images: ["/images/different-route-hoodie-back.webp", "/images/different-route-hoodie-front.webp"],
     description:
       "Different route, same destination. A crimson ridge climbs the back under a low red sun, with the Red Betta mark running down the spine.",
     details: HOODIE_DETAILS,
@@ -272,7 +274,7 @@ const products: Seed[] = [
 
 // Bump when the seeded catalogue copy/images change. Existing stores get the
 // new values once; after that, edits made in the admin are never overwritten.
-const CATALOG_VERSION = 3;
+const CATALOG_VERSION = 4;
 
 async function main() {
   const versionRow = await db.siteSetting.findUnique({ where: { key: "seed.catalogVersion" } });

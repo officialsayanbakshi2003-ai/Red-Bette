@@ -32,7 +32,10 @@ export default async function HomePage() {
   const wishlist = await getWishlistIds(user?.id);
   const tiles = categories.filter((c) => c._count.products > 0).slice(0, 5);
   // Lead with a hoodie that has a real photo (not vector artwork).
-  const heroHoodie = hoodies.find((p) => p.images[0] && !p.images[0].endsWith(".svg")) ?? hoodies[0];
+  const withPhoto = hoodies.filter((p) => p.images[0] && !p.images[0].endsWith(".svg"));
+  const heroHoodie = withPhoto.find((p) => p.tags.includes("bestseller")) ?? withPhoto[0] ?? hoodies[0];
+  // The big card reads best with a lifestyle shot, which we keep last in a product's gallery.
+  const heroHoodieImage = heroHoodie && heroHoodie.images.length > 2 ? heroHoodie.images.at(-1) : heroHoodie?.images[0];
   const moreHoodies = hoodies.filter((p) => p.id !== heroHoodie?.id);
 
   const orgJsonLd = {
@@ -65,12 +68,12 @@ export default async function HomePage() {
               data-reveal
             >
               <ProductImage
-                src={heroHoodie.images[0]}
+                src={heroHoodieImage}
                 alt={heroHoodie.name}
                 fill
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]"
+                className="object-cover object-[50%_25%] transition-transform duration-[1.2s] ease-out group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 sm:p-8">
@@ -133,7 +136,7 @@ export default async function HomePage() {
                 <RemotePhoto
                   photo={CATEGORY_PHOTO[c.slug]!}
                   sizes={i === 0 ? "(min-width: 1024px) 50vw, 100vw" : "(min-width: 1024px) 25vw, 50vw"}
-                  className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+                  className="object-cover object-[50%_25%] transition-transform duration-[1.2s] ease-out group-hover:scale-105"
                 />
               ) : (
                 <div className="absolute inset-0 bg-[radial-gradient(90%_90%_at_80%_20%,#4a0407_0%,#0a0a0b_70%)]" />

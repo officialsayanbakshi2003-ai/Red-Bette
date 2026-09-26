@@ -29,15 +29,17 @@ Every product and banner image on the site should be a real photo or an AI image
 
 Replace `[GARMENT]`, `[DESIGN]` and `[SCENE]` using the table below.
 
-### Hoodies (hero product, do these first)
+### Hoodies (hero product)
+
+All five hoodies already have studio front and back photos from your mockups. Use these prompts only for extra on-model shots.
 
 | # | Product | [GARMENT] | [DESIGN] | [SCENE] |
 |---|---|---|---|---|
-| 1 | Crimson Splash Hoodie *(already has photos)* | hoodie | a large crimson betta fish with flowing fins bursting through a wave of silver water droplets | standing against a concrete wall under red neon light |
-| 2 | Blood Moon Hoodie | hoodie | a huge blood-red moon with a crimson betta rising in front of it, split by a thin line of still water, a red vertical stripe on the hood | on a wet rooftop at night with a city skyline behind |
-| 3 | Made To Flow Alone Hoodie | hoodie | a red moon over jagged grey and crimson mountain peaks, with a lone wolf howling on the highest rock | walking alone down a rain-soaked street lit by red lights |
-| 4 | Red Widow Hoodie | hoodie | a black widow spider inside a crimson web over a red circle, the web continuing onto the sleeve | leaning on a pillar in an underground parking garage with red strip lights |
-| 5 | Different Route Hoodie | hoodie | a crimson mountain ridge climbing up the back under a low red sun | standing on a mountain road at dusk with red fog |
+| 1 | Crimson Splash Hoodie *(has photos)* | hoodie | a large crimson betta fish with flowing fins bursting through a wave of silver water droplets | standing against a concrete wall under red neon light |
+| 2 | Blood Moon Hoodie *(has photos)* | hoodie | a huge blood-red moon with a crimson betta rising in front of it, split by a thin line of still water, a red vertical stripe on the hood | on a wet rooftop at night with a city skyline behind |
+| 3 | Made To Flow Alone Hoodie *(has photos)* | hoodie | a red moon over jagged grey and crimson mountain peaks, with a lone wolf howling on the highest rock | walking alone down a rain-soaked street lit by red lights |
+| 4 | Red Widow Hoodie *(has photos)* | hoodie | a black widow spider inside a crimson web over a red circle, the web continuing onto the sleeve | leaning on a pillar in an underground parking garage with red strip lights |
+| 5 | Different Route Hoodie *(has photos)* | hoodie | a crimson mountain ridge climbing up the back under a low red sun | standing on a mountain road at dusk with red fog |
 
 ### Oversized tees
 
