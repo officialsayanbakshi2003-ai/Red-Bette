@@ -40,6 +40,19 @@ Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS 4 · PostgreSQ
 
 ## Run it locally
 
+**Quickest way (Windows or Mac):** install [Node.js LTS](https://nodejs.org), [Git](https://git-scm.com) and [Docker Desktop](https://www.docker.com/products/docker-desktop), open Docker Desktop, then run:
+
+```bash
+git clone -b claude/stoic-edison-ol6n6g https://github.com/officialsayanbakshi2003-ai/Red-Bette.git
+cd Red-Bette
+npm install
+npm run local
+```
+
+`npm run local` creates `.env` with a random secret, starts the database, loads the catalogue and starts the store. Admin login: `admin@redbetta.in` / `RedBetta@2026` (change `ADMIN_PASSWORD` in `.env` before going live).
+
+**Manual setup:**
+
 Requirements: Node.js 20.9 or newer, and PostgreSQL 14 or newer (or Docker).
 
 ```bash

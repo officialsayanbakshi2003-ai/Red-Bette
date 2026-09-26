@@ -14,7 +14,8 @@
     "db:deploy": "prisma migrate deploy",
     "db:seed": "prisma db seed",
     "db:studio": "prisma studio",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "local": "node scripts/local.mjs"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.0",
