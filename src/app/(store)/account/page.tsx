@@ -31,7 +31,7 @@ export default async function AccountPage() {
         ].map(([label, value, href]) => (
           <Link key={label as string} href={href as string} className="bg-ink p-4 transition-colors hover:bg-coal sm:p-6">
             <dt className="eyebrow">{label}</dt>
-            <dd className="mt-2 font-display text-3xl font-bold italic">{value}</dd>
+            <dd className="mt-2 font-display text-3xl font-extrabold">{value}</dd>
           </Link>
         ))}
       </dl>

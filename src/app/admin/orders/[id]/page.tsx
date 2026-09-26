@@ -34,7 +34,7 @@ export default async function AdminOrderPage({ params }: { params: Promise<{ id:
       </div>
 
       {order.adminNote && (
-        <p className="mb-6 border border-amber-400/40 bg-amber-400/10 px-4 py-3 text-sm">Note: {order.adminNote}</p>
+        <p className="mb-6 border border-amber-600/40 bg-amber-600/10 px-4 py-3 text-sm">Note: {order.adminNote}</p>
       )}
 
       <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">

@@ -12,7 +12,7 @@ export default function StoreError({ error, reset }: { error: Error & { digest?:
     <div className="container-x flex min-h-[60vh] flex-col items-center justify-center py-20 text-center">
       <p className="eyebrow">Something went wrong</p>
       <h1 className="display mt-4 text-5xl sm:text-6xl">
-        Choppy <span className="text-blood">waters.</span>
+        Something <span className="text-blood">broke.</span>
       </h1>
       <p className="mt-4 max-w-md text-sm text-mist">
         We hit a snag loading this page. Please try again. If it keeps happening, email us and we&apos;ll sort it out.

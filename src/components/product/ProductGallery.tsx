@@ -7,7 +7,7 @@ import { ProductImage } from "./ProductImage";
 export function ProductGallery({ images, name }: { images: string[]; name: string }) {
   const [active, setActive] = useState(0);
   const trackRef = useRef<HTMLDivElement>(null);
-  const list = images.length ? images : ["/brand/mark.svg"];
+  const list = images.length ? images : ["/images/placeholder.svg"];
 
   const scrollTo = (i: number) => {
     setActive(i);

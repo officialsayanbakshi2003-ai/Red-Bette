@@ -55,7 +55,7 @@ export function OrderUpdateForm({
       <Field label="Internal note" name="adminNote" hint="Only visible to admins.">
         <textarea id="adminNote" name="adminNote" defaultValue={order.adminNote ?? ""} rows={3} maxLength={1000} className={adminInput} />
       </Field>
-      {state.message && <p className={state.ok ? "text-sm text-emerald-400" : "text-sm text-blood"}>{state.message}</p>}
+      {state.message && <p className={state.ok ? "text-sm text-emerald-600" : "text-sm text-blood"}>{state.message}</p>}
       <button type="submit" disabled={pending} className={buttonClass({ variant: "light", block: true })}>
         {pending ? <Loader2 className="size-4 animate-spin" /> : "Save changes"}
       </button>

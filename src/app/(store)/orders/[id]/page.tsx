@@ -180,7 +180,7 @@ export default async function OrderPage({ params, searchParams }: Props) {
                 <dd className="tabular-nums">{formatINR(order.subtotal)}</dd>
               </div>
               {order.discount > 0 && (
-                <div className="flex justify-between text-emerald-400">
+                <div className="flex justify-between text-emerald-600">
                   <dt>Discount {order.couponCode ? `(${order.couponCode})` : ""}</dt>
                   <dd className="tabular-nums">−{formatINR(order.discount)}</dd>
                 </div>

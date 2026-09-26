@@ -1,4 +1,4 @@
-// Red Betta — database schema
+// Red Betta: database schema
 // All money values are stored as integers in paise (1 INR = 100 paise)
 // to avoid floating point rounding errors.
 

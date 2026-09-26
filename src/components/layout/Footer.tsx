@@ -21,7 +21,7 @@ const COLUMNS = [
       { href: "/faq", label: "FAQ" },
       { href: "/shipping-returns", label: "Shipping & returns" },
       { href: "/size-guide", label: "Size guide" },
-      { href: "/account/orders", label: "Track your order" },
+      { href: "/track", label: "Track your order" },
     ],
   },
   {
@@ -36,10 +36,10 @@ const COLUMNS = [
 
 export function Footer() {
   return (
-    <footer className="mt-24 border-t border-line bg-coal">
+    <footer className="theme-dark mt-24 bg-ink">
       <div className="container-x grid grid-cols-1 gap-12 py-14 lg:grid-cols-12 lg:py-20">
         <div className="lg:col-span-5">
-          <p className="eyebrow">Join the school</p>
+          <p className="eyebrow">Join the list</p>
           <h2 className="display mt-3 text-3xl sm:text-4xl">
             First in line <span className="text-blood">for every drop.</span>
           </h2>

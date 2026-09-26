@@ -1,21 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Saira } from "next/font/google";
+import { Archivo, Manrope } from "next/font/google";
 import { CartHydrator } from "@/components/cart/CartHydrator";
 import { RevealObserver } from "@/components/Reveal";
 import { Toaster } from "@/components/Toaster";
 import { siteConfig } from "@/lib/config";
 import "./globals.css";
 
-const saira = Saira({
+const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-saira",
-  style: ["normal", "italic"],
+  variable: "--font-archivo",
+  axes: ["wdth"],
   display: "swap",
 });
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-manrope",
   display: "swap",
 });
 
@@ -40,8 +40,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0b",
-  colorScheme: "dark",
+  themeColor: "#ffffff",
+  colorScheme: "light",
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
@@ -49,7 +49,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-IN" className={`${saira.variable} ${inter.variable}`}>
+    <html lang="en-IN" className={`${archivo.variable} ${manrope.variable}`}>
       <body className="min-h-dvh">
         {children}
         <Toaster />

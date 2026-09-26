@@ -1,9 +1,9 @@
 import Link from "next/link";
 import type { ProductCardData } from "@/lib/catalog";
 import { discountPercent } from "@/lib/money";
-import { sizeLabel, sizeRank } from "@/lib/config";
 import { Price } from "./Price";
 import { ProductImage } from "./ProductImage";
+import { QuickAdd } from "./QuickAdd";
 import { WishlistButton } from "./WishlistButton";
 
 export function ProductCard({
@@ -22,7 +22,6 @@ export function ProductCard({
   const off = discountPercent(product.price, product.compareAtPrice);
   const isNew = product.tags.includes("new");
   const isLimited = product.tags.includes("limited");
-  const sizeList = [...new Set(product.variants.map((v) => v.size))].sort((a, b) => sizeRank(a) - sizeRank(b));
   const [primary, secondary] = product.images;
 
   return (
@@ -80,19 +79,11 @@ export function ProductCard({
           className="absolute right-2 top-2 sm:right-3 sm:top-3"
         />
 
-        {!soldOut && sizeList.length > 1 && (
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 hidden translate-y-full bg-ink/85 px-3 py-2.5 backdrop-blur transition-transform duration-300 group-hover:translate-y-0 md:block">
-            <p className="flex flex-wrap gap-x-3 gap-y-1 font-display text-[0.68rem] uppercase tracking-[0.2em]">
-              {sizeList.map((s) => {
-                const available = product.variants.some((v) => v.size === s && v.stock > 0);
-                return (
-                  <span key={s} className={available ? "text-bone" : "text-ash line-through"}>
-                    {sizeLabel(s)}
-                  </span>
-                );
-              })}
-            </p>
-          </div>
+        {!soldOut && (
+          <QuickAdd
+            product={{ id: product.id, slug: product.slug, name: product.name, price: product.price, image: primary ?? null }}
+            variants={product.variants}
+          />
         )}
       </div>
 

@@ -68,7 +68,10 @@ const products: Seed[] = [
     category: "hoodies",
     price: rupees(2499),
     compareAt: rupees(2999),
-    images: ["/products/crimson-splash-back.svg", "/products/crimson-splash-front.svg"],
+    images: [
+      "/images/crimson-splash-hoodie-back.webp",
+      "/images/lookbook-betta-hoodie-model.webp",
+    ],
     description:
       "Our signature piece. A crimson betta bursts through a wave of silver water across the back, with a matching fish wrapping the front hem and sleeve. Heavy, soft and built to be lived in.",
     details: HOODIE_DETAILS,
@@ -84,9 +87,9 @@ const products: Seed[] = [
     category: "hoodies",
     price: rupees(2799),
     compareAt: rupees(3299),
-    images: ["/products/blood-moon-back.svg", "/products/blood-moon-front.svg"],
+    images: [],
     description:
-      "A betta rises against a blood-red moon, split by a line of still water. 流れが違う: the flow is different. Finished with a red hood stripe and a vertical sleeve print.",
+      "A betta rises against a blood-red moon, split by a line of still water. Finished with a red hood stripe and a vertical sleeve print.",
     details: HOODIE_DETAILS,
     tags: ["new", "limited", "betta"],
     featured: true,
@@ -100,7 +103,7 @@ const products: Seed[] = [
     name: "Made To Flow Alone Hoodie",
     category: "hoodies",
     price: rupees(2699),
-    images: ["/products/flow-alone-back.svg", "/products/flow-alone-front.svg"],
+    images: [],
     description:
       "For the ones who move on their own terms. A red moon over jagged peaks, with the Made To Flow Alone manifesto stacked across the back.",
     details: HOODIE_DETAILS,
@@ -114,7 +117,7 @@ const products: Seed[] = [
     name: "Red Widow Hoodie",
     category: "hoodies",
     price: rupees(2799),
-    images: ["/products/red-widow-back.svg", "/products/red-widow-front.svg"],
+    images: [],
     description:
       "Dark, sharp and unmistakable. A widow spider hangs in a red web across the back, crossing onto the chest and sleeve. The loudest piece in the drop.",
     details: HOODIE_DETAILS,
@@ -129,7 +132,7 @@ const products: Seed[] = [
     name: "Different Route Hoodie",
     category: "hoodies",
     price: rupees(2599),
-    images: ["/products/summit-back.svg", "/products/summit-front.svg"],
+    images: [],
     description:
       "Different route, same destination. A crimson ridge climbs the back under a low red sun, with the Red Betta mark running down the spine.",
     details: HOODIE_DETAILS,
@@ -144,7 +147,7 @@ const products: Seed[] = [
     category: "oversized-tees",
     price: rupees(1299),
     compareAt: rupees(1599),
-    images: ["/products/flow-your-way-tee-back.svg", "/products/flow-your-way-tee-front.svg"],
+    images: [],
     description: "The motto, loud and clear. Big italic back print, clean chest logo, heavyweight boxy fit.",
     details: TEE_DETAILS,
     tags: ["bestseller"],
@@ -158,7 +161,7 @@ const products: Seed[] = [
     name: "Betta Mark Tee (Bone)",
     category: "oversized-tees",
     price: rupees(1199),
-    images: ["/products/betta-mark-tee-front.svg", "/products/betta-mark-tee-back.svg"],
+    images: [],
     description: "Our crimson betta mark, printed big on an off-white bone tee. Minimal back with the tagline.",
     details: TEE_DETAILS,
     tags: ["new", "betta"],
@@ -172,7 +175,7 @@ const products: Seed[] = [
     name: "Red Moon Oversized Tee",
     category: "oversized-tees",
     price: rupees(1399),
-    images: ["/products/red-moon-tee-back.svg", "/products/red-moon-tee-front.svg"],
+    images: [],
     description: "A betta circling a red moon, surrounded by rising bubbles. Oversized, heavyweight, easy.",
     details: TEE_DETAILS,
     tags: ["betta"],
@@ -186,7 +189,7 @@ const products: Seed[] = [
     name: "Signature Logo Tee",
     category: "oversized-tees",
     price: rupees(999),
-    images: ["/products/signature-tee-back.svg", "/products/signature-tee-front.svg"],
+    images: [],
     description: "The essential. Small betta on the chest, full RED BETTA wordmark on the back.",
     details: TEE_DETAILS,
     tags: ["essential"],
@@ -199,7 +202,7 @@ const products: Seed[] = [
     name: "Crimson Tide Crewneck",
     category: "sweatshirts",
     price: rupees(2199),
-    images: ["/products/crimson-tide-crew-front.svg", "/products/crimson-tide-crew-back.svg"],
+    images: [],
     description: "A betta riding a silver tide across the front, with a vertical tagline down the sleeve.",
     details: CREW_DETAILS,
     tags: ["betta"],
@@ -212,7 +215,7 @@ const products: Seed[] = [
     name: "Stealth Crewneck",
     category: "sweatshirts",
     price: rupees(1999),
-    images: ["/products/stealth-crew-front.svg", "/products/stealth-crew-back.svg"],
+    images: [],
     description: "All black, tonal everything. A quiet logo on the chest and a shadow betta on the back.",
     details: CREW_DETAILS,
     tags: ["essential"],
@@ -225,7 +228,7 @@ const products: Seed[] = [
     name: "Flow Joggers",
     category: "joggers",
     price: rupees(1799),
-    images: ["/products/flow-joggers-front.svg", "/products/flow-joggers-side.svg"],
+    images: [],
     description: "Relaxed tapered joggers with crimson side stripes and red-tipped drawcords.",
     details: [
       "320 GSM brushed-back cotton fleece",
@@ -244,7 +247,7 @@ const products: Seed[] = [
     name: "Betta Cap",
     category: "accessories",
     price: rupees(799),
-    images: ["/products/betta-cap.svg"],
+    images: [],
     description: "Six-panel cap with an embroidered crimson betta. Adjustable strap, one size.",
     details: ["100% cotton twill", "Embroidered front mark", "Adjustable strap", "One size fits most"],
     tags: ["accessory"],
@@ -257,7 +260,7 @@ const products: Seed[] = [
     name: "Flow Tote",
     category: "accessories",
     price: rupees(699),
-    images: ["/products/flow-tote.svg"],
+    images: [],
     description: "Heavy canvas tote with the full Red Betta mark. Carries a laptop and then some.",
     details: ["12 oz natural cotton canvas", "Reinforced black handles", "Inner pocket", "40 × 38 cm"],
     tags: ["accessory"],
@@ -267,12 +270,19 @@ const products: Seed[] = [
   },
 ];
 
+// Bump when the seeded catalogue copy/images change. Existing stores get the
+// new values once; after that, edits made in the admin are never overwritten.
+const CATALOG_VERSION = 3;
+
 async function main() {
+  const versionRow = await db.siteSetting.findUnique({ where: { key: "seed.catalogVersion" } });
+  const applyCatalogUpdate = Number(versionRow?.value ?? 0) < CATALOG_VERSION;
+
   const categoryIds = new Map<string, string>();
   for (const c of categories) {
     const row = await db.category.upsert({
       where: { slug: c.slug },
-      update: { name: c.name, description: c.description, sortOrder: c.sortOrder },
+      update: applyCatalogUpdate ? { name: c.name, description: c.description } : {},
       create: c,
     });
     categoryIds.set(c.slug, row.id);
@@ -291,7 +301,12 @@ async function main() {
       isActive: true,
       categoryId: categoryIds.get(p.category)!,
     };
-    const product = await db.product.upsert({ where: { slug: p.slug }, update: data, create: { slug: p.slug, ...data } });
+    const { name, description, details, images } = data;
+    const product = await db.product.upsert({
+      where: { slug: p.slug },
+      update: applyCatalogUpdate ? { name, description, details, images } : {},
+      create: { slug: p.slug, ...data },
+    });
     for (const size of p.sizes) {
       const sku = `${p.skuPrefix}-${size}`;
       const stock = p.stock?.[size] ?? DEFAULT_STOCK[size] ?? 10;
@@ -311,6 +326,12 @@ async function main() {
   for (const c of coupons) {
     await db.coupon.upsert({ where: { code: c.code }, update: {}, create: c });
   }
+
+  await db.siteSetting.upsert({
+    where: { key: "seed.catalogVersion" },
+    update: { value: String(CATALOG_VERSION) },
+    create: { key: "seed.catalogVersion", value: String(CATALOG_VERSION) },
+  });
 
   const adminEmail = process.env.ADMIN_EMAIL?.trim().toLowerCase();
   const adminPassword = process.env.ADMIN_PASSWORD;

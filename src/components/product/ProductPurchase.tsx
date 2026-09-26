@@ -165,7 +165,7 @@ export function ProductPurchase({
             ) : selected && selected.stock > 0 && selected.stock <= 5 ? (
               <span className="text-blood">Hurry, only {selected.stock} left in this size.</span>
             ) : selected ? (
-              <span className="text-emerald-400">In stock, ready to ship.</span>
+              <span className="text-emerald-600">In stock, ready to ship.</span>
             ) : null}
           </p>
         </div>

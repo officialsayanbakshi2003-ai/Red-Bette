@@ -35,7 +35,7 @@ export function NewsletterForm({ className }: { className?: string }) {
       <p
         id="newsletter-status"
         aria-live="polite"
-        className={clsx("mt-2 min-h-5 text-xs", state.ok ? "text-emerald-400" : "text-blood")}
+        className={clsx("mt-2 min-h-5 text-xs", state.ok ? "text-emerald-600" : "text-blood")}
       >
         {state.message}
       </p>

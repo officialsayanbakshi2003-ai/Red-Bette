@@ -11,7 +11,7 @@ import { INDIAN_STATES } from "@/lib/india";
 function Status({ state }: { state: FormState }) {
   if (!state.message) return null;
   return (
-    <p role="status" className={state.ok ? "text-sm text-emerald-400" : "text-sm text-blood"}>
+    <p role="status" className={state.ok ? "text-sm text-emerald-600" : "text-sm text-blood"}>
       {state.message}
     </p>
   );

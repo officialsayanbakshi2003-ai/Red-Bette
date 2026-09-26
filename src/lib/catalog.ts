@@ -139,3 +139,21 @@ export async function getWishlistIds(userId: string | null | undefined): Promise
   const rows = await db.wishlistItem.findMany({ where: { userId }, select: { productId: true } });
   return new Set(rows.map((r) => r.productId));
 }
+
+export async function getProductsInCategory(slug: string, take = 8) {
+  return db.product.findMany({
+    where: { isActive: true, category: { slug } },
+    orderBy: [{ isFeatured: "desc" }, { createdAt: "desc" }],
+    take,
+    select: productCardSelect,
+  });
+}
+
+export async function getProductsOutsideCategory(slug: string, take = 8) {
+  return db.product.findMany({
+    where: { isActive: true, category: { slug: { not: slug } } },
+    orderBy: [{ isFeatured: "desc" }, { createdAt: "desc" }],
+    take,
+    select: productCardSelect,
+  });
+}

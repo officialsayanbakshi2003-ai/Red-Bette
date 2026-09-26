@@ -78,11 +78,11 @@ export default async function AdminProductsPage({ searchParams }: Props) {
                 </Td>
                 <Td className="text-mist">{p.category.name}</Td>
                 <Td className="tabular-nums">{formatINR(p.price)}</Td>
-                <Td className={stock === 0 ? "text-blood" : stock <= 10 ? "text-amber-300" : "text-mist"}>
+                <Td className={stock === 0 ? "text-blood" : stock <= 10 ? "text-amber-700" : "text-mist"}>
                   {stock} in {p.variants.length} variant{p.variants.length === 1 ? "" : "s"}
                 </Td>
                 <Td>
-                  <span className={"border px-2 py-0.5 text-[0.68rem] font-semibold uppercase tracking-wider " + (p.isActive ? "border-emerald-400/40 text-emerald-300" : "border-line text-ash")}>
+                  <span className={"border px-2 py-0.5 text-[0.68rem] font-semibold uppercase tracking-wider " + (p.isActive ? "border-emerald-600/40 text-emerald-700" : "border-line text-ash")}>
                     {p.isActive ? "Active" : "Archived"}
                   </span>
                   {p.isFeatured && <span className="ml-2 text-[0.68rem] uppercase tracking-wider text-blood">Featured</span>}

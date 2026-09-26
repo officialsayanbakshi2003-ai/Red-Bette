@@ -9,7 +9,7 @@ import { useFormAction } from "./useFormAction";
 export function ContactForm() {
   const { state, pending, formProps } = useFormAction<FormState>(submitContact, {});
   if (state.ok) {
-    return <p className="border border-emerald-400/40 bg-emerald-400/10 p-6 text-sm">{state.message}</p>;
+    return <p className="border border-emerald-600/40 bg-emerald-600/10 p-6 text-sm">{state.message}</p>;
   }
   const e = state.errors ?? {};
   return (

@@ -1,4 +1,4 @@
-const PHRASES = ["Flow your way", "Made to flow alone", "Different route, same destination", "流れが違う"];
+const PHRASES = ["Flow your way", "Made to flow alone", "Different route, same destination", "Made in India"];
 
 export function Marquee() {
   const items = [...PHRASES, ...PHRASES, ...PHRASES];
@@ -11,7 +11,7 @@ export function Marquee() {
               className={
                 i % 2 === 0
                   ? "display px-6 text-4xl text-bone sm:px-10 sm:text-6xl"
-                  : "display px-6 text-4xl text-transparent [-webkit-text-stroke:1px_rgba(239,237,232,0.55)] sm:px-10 sm:text-6xl"
+                  : "display px-6 text-4xl text-transparent [-webkit-text-stroke:1px_rgba(11,11,12,0.5)] sm:px-10 sm:text-6xl"
               }
             >
               {p}

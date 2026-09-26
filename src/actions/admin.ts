@@ -89,6 +89,39 @@ export async function saveProduct(productId: string | null, input: ProductInput)
   }
 }
 
+/** Copies a product (as a hidden draft with zero stock) so a new design can be added quickly. */
+export async function duplicateProduct(productId: unknown) {
+  await requireAdmin();
+  const id = idSchema.parse(productId);
+  const source = await db.product.findUnique({ where: { id }, include: { variants: true } });
+  if (!source) return;
+  const suffix = Math.random().toString(36).slice(2, 6);
+  const copy = await db.product.create({
+    data: {
+      name: `${source.name} (copy)`,
+      slug: `${source.slug}-copy-${suffix}`.slice(0, 100),
+      description: source.description,
+      details: source.details,
+      price: source.price,
+      compareAtPrice: source.compareAtPrice,
+      categoryId: source.categoryId,
+      images: source.images,
+      tags: source.tags,
+      isFeatured: false,
+      isActive: false,
+      variants: {
+        create: source.variants.map((v) => ({
+          size: v.size,
+          color: v.color,
+          sku: `${v.sku}-C${suffix.toUpperCase()}`.slice(0, 64),
+          stock: 0,
+        })),
+      },
+    },
+  });
+  redirect(`/admin/products/${copy.id}`);
+}
+
 export async function deleteProduct(productId: unknown) {
   await requireAdmin();
   const id = idSchema.parse(productId);

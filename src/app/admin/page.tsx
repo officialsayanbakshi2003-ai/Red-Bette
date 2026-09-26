@@ -90,12 +90,12 @@ export default async function AdminDashboard() {
       {(toShip > 0 || pendingPayment > 0) && (
         <div className="flex flex-wrap gap-3">
           {toShip > 0 && (
-            <Link href="/admin/orders?status=CONFIRMED" className="flex items-center gap-2 border border-sky-400/40 bg-sky-400/10 px-4 py-2.5 text-sm hover:border-sky-300">
+            <Link href="/admin/orders?status=CONFIRMED" className="flex items-center gap-2 border border-sky-600/40 bg-sky-600/10 px-4 py-2.5 text-sm hover:border-sky-700">
               {toShip} order{toShip === 1 ? "" : "s"} ready to ship <ArrowRight className="size-4" />
             </Link>
           )}
           {pendingPayment > 0 && (
-            <Link href="/admin/orders?status=PENDING" className="flex items-center gap-2 border border-amber-400/40 bg-amber-400/10 px-4 py-2.5 text-sm hover:border-amber-300">
+            <Link href="/admin/orders?status=PENDING" className="flex items-center gap-2 border border-amber-600/40 bg-amber-600/10 px-4 py-2.5 text-sm hover:border-amber-700">
               {pendingPayment} awaiting payment <ArrowRight className="size-4" />
             </Link>
           )}
@@ -110,7 +110,7 @@ export default async function AdminDashboard() {
         </Card>
         <Card className="p-5">
           <h2 className="flex items-center gap-2 text-sm font-semibold">
-            <AlertTriangle className="size-4 text-amber-300" /> Low stock
+            <AlertTriangle className="size-4 text-amber-700" /> Low stock
           </h2>
           {lowStock.length === 0 ? (
             <p className="mt-4 text-sm text-mist">All sizes are well stocked.</p>
@@ -121,7 +121,7 @@ export default async function AdminDashboard() {
                   <Link href={`/admin/products/${v.product.id}`} className="min-w-0 truncate hover:text-blood">
                     {v.product.name} <span className="text-mist">· {sizeLabel(v.size)}</span>
                   </Link>
-                  <span className={v.stock === 0 ? "shrink-0 text-xs font-semibold text-blood" : "shrink-0 text-xs text-amber-300"}>
+                  <span className={v.stock === 0 ? "shrink-0 text-xs font-semibold text-blood" : "shrink-0 text-xs text-amber-700"}>
                     {v.stock === 0 ? "Sold out" : `${v.stock} left`}
                   </span>
                 </li>

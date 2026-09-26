@@ -20,7 +20,7 @@ export function Toaster() {
             t.tone === "error" ? "border-blood/60" : "border-line",
           )}
         >
-          {t.tone === "success" && <CheckCircle2 className="size-4 shrink-0 text-emerald-400" />}
+          {t.tone === "success" && <CheckCircle2 className="size-4 shrink-0 text-emerald-600" />}
           {t.tone === "error" && <XCircle className="size-4 shrink-0 text-blood" />}
           <p className="flex-1">{t.message}</p>
           <button onClick={() => dismiss(t.id)} aria-label="Dismiss" className="text-mist hover:text-bone">

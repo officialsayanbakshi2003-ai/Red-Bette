@@ -1,16 +1,16 @@
 import { clsx } from "clsx";
 
 const ORDER_STATUS: Record<string, { label: string; className: string }> = {
-  PENDING: { label: "Awaiting payment", className: "border-amber-400/40 text-amber-300" },
-  CONFIRMED: { label: "Confirmed", className: "border-sky-400/40 text-sky-300" },
-  SHIPPED: { label: "Shipped", className: "border-violet-400/40 text-violet-300" },
-  DELIVERED: { label: "Delivered", className: "border-emerald-400/40 text-emerald-300" },
+  PENDING: { label: "Awaiting payment", className: "border-amber-600/40 text-amber-700" },
+  CONFIRMED: { label: "Confirmed", className: "border-sky-600/40 text-sky-700" },
+  SHIPPED: { label: "Shipped", className: "border-violet-600/40 text-violet-700" },
+  DELIVERED: { label: "Delivered", className: "border-emerald-600/40 text-emerald-700" },
   CANCELLED: { label: "Cancelled", className: "border-line text-ash" },
 };
 
 const PAYMENT_STATUS: Record<string, { label: string; className: string }> = {
-  PENDING: { label: "Unpaid", className: "border-amber-400/40 text-amber-300" },
-  PAID: { label: "Paid", className: "border-emerald-400/40 text-emerald-300" },
+  PENDING: { label: "Unpaid", className: "border-amber-600/40 text-amber-700" },
+  PAID: { label: "Paid", className: "border-emerald-600/40 text-emerald-700" },
   FAILED: { label: "Payment failed", className: "border-blood/50 text-blood" },
   REFUNDED: { label: "Refunded", className: "border-line text-mist" },
 };

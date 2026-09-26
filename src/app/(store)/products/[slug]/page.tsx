@@ -200,7 +200,7 @@ export default async function ProductPage({ params }: Props) {
               <h2 id="reviews-title" className="display text-4xl">Reviews</h2>
               {product._count.reviews > 0 && product.averageRating != null ? (
                 <div className="mt-4 flex items-center gap-3">
-                  <span className="font-display text-5xl font-bold italic">{product.averageRating.toFixed(1)}</span>
+                  <span className="font-display text-5xl font-extrabold">{product.averageRating.toFixed(1)}</span>
                   <div>
                     <Stars rating={product.averageRating} className="size-4" />
                     <p className="mt-1 text-xs text-mist">
@@ -238,7 +238,7 @@ export default async function ProductPage({ params }: Props) {
                       {r.title && <p className="mt-3 font-display font-semibold">{r.title}</p>}
                       <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-mist">{r.body}</p>
                       <p className="mt-3 text-xs text-ash">
-                        {r.user.name.split(" ")[0]} · <span className="text-emerald-400/80">Verified buyer</span>
+                        {r.user.name.split(" ")[0]} · <span className="text-emerald-600/80">Verified buyer</span>
                       </p>
                     </li>
                   ))}

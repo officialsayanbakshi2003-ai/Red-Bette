@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 
 export default async function AboutPage() {
   const media = await getStorefrontMedia();
-  const credits = [...new Set(Object.values(MEDIA_SLOTS).map((s) => s.photo.credit))].filter((c) => c !== "Pexels");
+  const usesPexels = Object.values(MEDIA_SLOTS).some((s) => s.photo.src.includes("pexels.com"));
   return (
     <>
-      <section className="relative isolate overflow-hidden">
+      <section className="theme-dark relative isolate overflow-hidden bg-ink">
         <div className="absolute inset-0 -z-10">
           <RemotePhoto photo={media.aboutHero} priority sizes="100vw" className="object-cover" fallbackClassName="object-contain p-16" />
           <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/20" />
@@ -24,7 +24,7 @@ export default async function AboutPage() {
         <div className="container-x flex min-h-[70svh] flex-col justify-end pb-14 pt-32">
           <p className="eyebrow !text-bone/80">{siteConfig.parentLine}</p>
           <h1 className="display mt-4 max-w-4xl text-6xl sm:text-8xl">
-            Born to <span className="text-blood">flow different.</span>
+            Built different. <span className="text-blood">Worn your way.</span>
           </h1>
         </div>
       </section>
@@ -32,13 +32,12 @@ export default async function AboutPage() {
       <section className="container-x grid grid-cols-1 gap-12 py-20 lg:grid-cols-12 lg:gap-16">
         <div className="space-y-6 text-base leading-relaxed text-bone/80 sm:text-lg lg:col-span-6">
           <p>
-            The betta is small, fierce and impossible to ignore. It doesn&apos;t swim with the school. It holds its own
-            water, flares its fins and moves like nothing else in the tank. We named the label after it because
-            that&apos;s the energy we design for.
+            The name comes from the betta: small, fearless and impossible to ignore. That attitude is what we design
+            for, whatever the artwork on the back.
           </p>
           <p>
             {siteConfig.name} is a streetwear label {siteConfig.parentLine.toLowerCase()}. Every piece starts as
-            hand-drawn art: crimson bettas, blood moons, lone wolves, red widows. We print it big and bold on
+            original art: crimson fins, blood moons, lone wolves, red widows, mountain ridges. We print it big and bold on
             heavyweight cotton and finish it with the details you notice later, like red-tipped drawcords, hood stripes and
             sleeve prints.
           </p>
@@ -75,9 +74,9 @@ export default async function AboutPage() {
         <p className="display mx-auto mt-4 max-w-3xl text-4xl sm:text-6xl">
           Different route. <span className="text-blood">Same destination.</span>
         </p>
-        <p className="mx-auto mt-10 max-w-xl text-xs text-ash">
-          Lifestyle photography courtesy of Pexels contributors{credits.length ? `: ${credits.join(", ")}` : ""}.
-        </p>
+        {usesPexels && (
+          <p className="mx-auto mt-10 max-w-xl text-xs text-ash">Some lifestyle photography courtesy of Pexels.</p>
+        )}
       </section>
     </>
   );

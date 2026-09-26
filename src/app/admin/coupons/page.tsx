@@ -51,7 +51,7 @@ export default async function CouponsPage() {
                       {c.maxUses != null ? ` / ${c.maxUses}` : ""}
                     </Td>
                     <Td>
-                      <span className={"border px-2 py-0.5 text-[0.68rem] font-semibold uppercase tracking-wider " + (live ? "border-emerald-400/40 text-emerald-300" : "border-line text-ash")}>
+                      <span className={"border px-2 py-0.5 text-[0.68rem] font-semibold uppercase tracking-wider " + (live ? "border-emerald-600/40 text-emerald-700" : "border-line text-ash")}>
                         {live ? "Live" : expired ? "Expired" : exhausted ? "Used up" : "Paused"}
                       </span>
                     </Td>

@@ -18,8 +18,8 @@ export interface NavCategory {
 }
 
 const PRIMARY = [
-  { href: "/shop?tag=new", label: "New Drop" },
   { href: "/shop?category=hoodies", label: "Hoodies" },
+  { href: "/shop?tag=new", label: "New Drop" },
   { href: "/shop?category=oversized-tees", label: "Tees" },
   { href: "/about", label: "Our Story" },
 ];
@@ -34,6 +34,16 @@ export function Header({ categories, menuPhotos }: { categories: NavCategory[]; 
   const lines = useCart((s) => s.lines);
   const hydrated = useCart((s) => s.hydrated);
   const count = hydrated ? cartCount(lines) : 0;
+
+  // Close the mega menu with Escape (keyboard users open it by focusing "Shop").
+  useEffect(() => {
+    if (!megaOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMegaOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [megaOpen]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -182,13 +192,13 @@ export function Header({ categories, menuPhotos }: { categories: NavCategory[]; 
                 <li><Link href="/shop?tag=essential" className="hover:text-bone">Essentials</Link></li>
               </ul>
             </div>
-            <Link href="/shop?category=hoodies" className="group relative col-span-3 aspect-[4/3] overflow-hidden bg-char">
+            <Link href="/shop?category=hoodies" className="theme-dark group relative col-span-3 aspect-[4/3] overflow-hidden bg-char">
               <RemotePhoto photo={menuPhotos.hoodies} sizes="25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <span className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-ink to-transparent p-4 font-display text-sm font-semibold uppercase tracking-[0.2em]">
                 Hoodies <ArrowRight className="size-4" />
               </span>
             </Link>
-            <Link href="/shop?category=oversized-tees" className="group relative col-span-3 aspect-[4/3] overflow-hidden bg-char">
+            <Link href="/shop?category=oversized-tees" className="theme-dark group relative col-span-3 aspect-[4/3] overflow-hidden bg-char">
               <RemotePhoto photo={menuPhotos.tees} sizes="25vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
               <span className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-ink to-transparent p-4 font-display text-sm font-semibold uppercase tracking-[0.2em]">
                 Oversized tees <ArrowRight className="size-4" />
@@ -216,7 +226,7 @@ export function Header({ categories, menuPhotos }: { categories: NavCategory[]; 
         <nav className="flex-1 overflow-y-auto px-5 py-6" aria-label="Mobile">
           <ul className="space-y-1">
             <li>
-              <Link href="/shop" className="flex items-center justify-between py-3 font-display text-2xl font-bold italic uppercase">
+              <Link href="/shop" className="flex items-center justify-between py-3 font-display text-2xl font-extrabold uppercase">
                 Shop all <ArrowRight className="size-5 text-blood" />
               </Link>
             </li>
@@ -224,7 +234,7 @@ export function Header({ categories, menuPhotos }: { categories: NavCategory[]; 
               <li key={c.slug}>
                 <Link
                   href={`/shop?category=${c.slug}`}
-                  className="block py-3 font-display text-2xl font-bold italic uppercase text-bone/85"
+                  className="block py-3 font-display text-2xl font-extrabold uppercase text-bone/85"
                 >
                   {c.name}
                 </Link>

@@ -5,7 +5,7 @@ export async function AuthShell({ title, subtitle, children }: { title: string; 
   const media = await getStorefrontMedia();
   return (
     <div className="container-x grid grid-cols-1 gap-12 py-12 sm:py-16 lg:grid-cols-2 lg:items-center lg:gap-20">
-      <div className="relative hidden aspect-[4/5] overflow-hidden bg-char lg:block">
+      <div className="theme-dark relative hidden aspect-[4/5] overflow-hidden bg-char lg:block">
         <RemotePhoto photo={media.auth} sizes="50vw" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-transparent" />
         <p className="display absolute bottom-8 left-8 text-5xl">

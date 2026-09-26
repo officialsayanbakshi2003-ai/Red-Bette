@@ -129,14 +129,14 @@ Create a [Resend](https://resend.com) account, verify your domain, and set `RESE
 - **Store settings** (shipping fee, free-shipping threshold, COD fee and limit, return window, contact details): `src/lib/config.ts`
 - **Products, stock, coupons, storefront photos**: from the admin dashboard
 - **Brand colours and fonts**: `src/app/globals.css`
-- **Product photos**: the catalogue ships with vector artwork of each design. Upload real photos from **Admin → Products** (portrait 4:5, around 1600 × 2000 px).
-- **Lifestyle photos**: defaults come from [Pexels](https://www.pexels.com/license/) (free for commercial use). Replace them in **Admin → Storefront**. Prompts for generating on-brand images are in [`docs/IMAGE_PROMPTS.md`](docs/IMAGE_PROMPTS.md).
+- **Product photos**: products without a photo show a "Photo coming soon" placeholder. Upload photos from **Admin → Products** (portrait 4:5, around 1600 × 2000 px).
+- **Lifestyle photos**: defaults are the Red Betta campaign images in `public/images` (one category tile uses a free [Pexels](https://www.pexels.com/license/) photo). Replace any of them in **Admin → Storefront**. Prompts for generating on-brand images are in [`docs/IMAGE_PROMPTS.md`](docs/IMAGE_PROMPTS.md).
 
 ## Project structure
 
 ```
 prisma/              Database schema, migrations and seed data
-public/products/     Product artwork
+public/images/       Campaign photos and placeholder
 public/brand/        Logo marks
 src/app/(store)/     Storefront pages
 src/app/admin/       Admin dashboard

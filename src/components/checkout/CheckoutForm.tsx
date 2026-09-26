@@ -327,9 +327,9 @@ export function CheckoutForm({
       {/* Coupon */}
       <div>
         {coupon ? (
-          <div className="flex items-center justify-between gap-3 border border-dashed border-emerald-400/40 px-3 py-2.5">
+          <div className="flex items-center justify-between gap-3 border border-dashed border-emerald-600/40 px-3 py-2.5">
             <p className="flex min-w-0 items-center gap-2 text-sm">
-              <Tag className="size-4 shrink-0 text-emerald-400" />
+              <Tag className="size-4 shrink-0 text-emerald-600" />
               <span className="font-semibold">{coupon.code}</span>
               <span className="truncate text-xs text-mist">{coupon.description}</span>
             </p>
@@ -384,7 +384,7 @@ export function CheckoutForm({
           <dd className="tabular-nums">{formatINR(totals.subtotal)}</dd>
         </div>
         {totals.discount > 0 && (
-          <div className="flex justify-between text-emerald-400">
+          <div className="flex justify-between text-emerald-600">
             <dt>Discount ({activeCoupon?.code})</dt>
             <dd className="tabular-nums">−{formatINR(totals.discount)}</dd>
           </div>
@@ -586,7 +586,7 @@ export function CheckoutForm({
               />
               <span>
                 <span className="block text-sm font-semibold">
-                  Pay online {demoPayments && <span className="ml-1 text-xs font-normal text-amber-300">(demo mode)</span>}
+                  Pay online {demoPayments && <span className="ml-1 text-xs font-normal text-amber-700">(demo mode)</span>}
                 </span>
                 <span className="mt-1 block text-xs text-mist">UPI, cards, net banking and wallets. Secured by Razorpay.</span>
                 {!onlinePayments && <span className="mt-1 block text-xs text-blood">Online payment is unavailable right now.</span>}
@@ -614,7 +614,7 @@ export function CheckoutForm({
           </div>
         </section>
 
-        {notice && <p className="border border-amber-400/40 bg-amber-400/10 px-4 py-3 text-sm">{notice}</p>}
+        {notice && <p className="border border-amber-600/40 bg-amber-600/10 px-4 py-3 text-sm">{notice}</p>}
         {error && (
           <p role="alert" className="border border-blood/50 bg-blood/10 px-4 py-3 text-sm">
             {error}

@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0a0a0b;
-  --color-coal: #101012;
-  --color-char: #17171a;
-  --color-smoke: #202024;
-  --color-line: #2a2a30;
-  --color-ash: #6e6e76;
-  --color-mist: #a1a1aa;
-  --color-bone: #efede8;
-  --color-blood: #e3141b;
-  --color-blood-hot: #ff2a31;
+  /* Light theme (default). "ink" is the page background, "bone" the main text. */
+  --color-ink: #ffffff;
+  --color-coal: #f7f6f4;
+  --color-char: #efeeeb;
+  --color-smoke: #e9e7e3;
+  --color-line: #e3e1dc;
+  --color-ash: #75757c;
+  --color-mist: #55555c;
+  --color-bone: #0b0b0c;
+  --color-blood: #d8121a;
+  --color-blood-hot: #b50e15;
   --color-blood-deep: #a50d14;
   --color-blood-dark: #4a0407;
 
@@ -41,13 +42,13 @@
 }
 
 @theme inline {
-  --font-display: var(--font-saira), ui-sans-serif, system-ui, sans-serif;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light;
     --header-h: 64px;
   }
   html {
@@ -97,6 +98,23 @@
   }
 }
 
+/* Dark sections (hero, banners, footer, photo overlays) reuse every utility
+   with the dark palette by re-scoping the colour variables. */
+.theme-dark {
+  --color-ink: #0a0a0b;
+  --color-coal: #111113;
+  --color-char: #18181b;
+  --color-smoke: #222226;
+  --color-line: #2c2c32;
+  --color-ash: #8b8b93;
+  --color-mist: #b4b4bb;
+  --color-bone: #f4f3ef;
+  --color-blood: #e3141b;
+  --color-blood-hot: #ff2a31;
+  color: var(--color-bone);
+  color-scheme: dark;
+}
+
 @utility container-x {
   width: 100%;
   max-width: 1440px;
@@ -112,9 +130,9 @@
 
 @utility eyebrow {
   font-family: var(--font-display);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.32em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--color-mist);
 }
@@ -122,10 +140,10 @@
 @utility display {
   font-family: var(--font-display);
   font-weight: 800;
-  font-style: italic;
+  font-stretch: 112%;
   text-transform: uppercase;
-  letter-spacing: -0.01em;
-  line-height: 0.92;
+  letter-spacing: -0.025em;
+  line-height: 0.9;
 }
 
 @utility no-scrollbar {

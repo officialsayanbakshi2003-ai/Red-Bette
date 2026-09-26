@@ -13,7 +13,7 @@ export default async function RegisterPage({ searchParams }: Props) {
   const safeNext = next ? safeNextPath(next) : undefined;
   if (await getCurrentUser()) redirect(safeNext ?? "/account");
   return (
-    <AuthShell title="Join the school" subtitle="Create an account for early drop access, order tracking and faster checkout.">
+    <AuthShell title="Create account" subtitle="Create an account for early drop access, order tracking and faster checkout.">
       <RegisterForm next={safeNext} />
     </AuthShell>
   );

@@ -4,7 +4,7 @@ import { clsx } from "clsx";
 import { ArrowLeft, ArrowRight, ImagePlus, Link2, Loader2, Plus, Trash2, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useRef, useState, useTransition } from "react";
-import { deleteProduct, saveProduct } from "@/actions/admin";
+import { deleteProduct, duplicateProduct, saveProduct } from "@/actions/admin";
 import { Field } from "@/components/forms/Field";
 import { ProductImage } from "@/components/product/ProductImage";
 import { buttonClass } from "@/components/ui/button";
@@ -393,6 +393,16 @@ export function ProductForm({
           <button type="submit" disabled={saving || uploading} className={buttonClass({ size: "lg", block: true })}>
             {saving ? <Loader2 className="size-4 animate-spin" /> : initial?.id ? "Save changes" : "Create product"}
           </button>
+          {initial?.id && (
+            <button
+              type="button"
+              disabled={deleting || saving}
+              onClick={() => startDeleting(() => duplicateProduct(initial.id!))}
+              className={buttonClass({ variant: "outline", block: true })}
+            >
+              Duplicate as new design
+            </button>
+          )}
           {initial?.id && (
             <button
               type="button"

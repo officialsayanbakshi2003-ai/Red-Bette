@@ -14,7 +14,7 @@ export function ReviewForm({ productId }: { productId: string }) {
   const [hover, setHover] = useState<number | null>(null);
 
   if (state.ok) {
-    return <p className="border border-line bg-coal p-5 text-sm text-emerald-400">{state.message}</p>;
+    return <p className="border border-line bg-coal p-5 text-sm text-emerald-600">{state.message}</p>;
   }
 
   return (
